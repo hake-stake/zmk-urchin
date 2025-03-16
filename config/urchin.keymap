@@ -124,7 +124,7 @@
 		};
 		// tab = left middle row middle fingers 
 		combo_tab {
-			timeout-ms = <110050>;
+			timeout-ms = <100>;
 			key-positions = <11 12>;
 			bindings = <&kp TAB>;
 			layers = <BASE>;

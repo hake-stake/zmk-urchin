@@ -51,6 +51,62 @@
 			#binding-cells = <0>;
 			bindings = <&kp LSHIFT &kp RSHIFT &kp LCTRL &kp RCTRL &kp LALT &kp RALT &kp LGUI &kp RGUI>;
 		};
+		//print screen macro
+		print_screen: print_screen {
+			label = "print_screen";
+			compatible = "zmk,behavior-macro";
+			#binding-cells = <0>;
+			bindings = <&kp LSHIFT &kp LALT &kp LGUI &kp KP_N4>;
+		};
+		//resize window left
+		windowL: windowL {
+			label = "windowL";
+			compatible = "zmk,behavior-macro";
+			#binding-cells = <0>;
+			bindings = <&kp LALT &kp LCTRL &kp LEFT>;
+		};
+		//resize window right
+		windowR: windowR {
+			label = "windowR";
+			compatible = "zmk,behavior-macro";
+			#binding-cells = <0>;
+			bindings = <&kp LALT &kp LCTRL &kp RIGHT>;
+		};
+		//switch desktop window left
+		deskL: deskL {
+			label = "deskL";
+			compatible = "zmk,behavior-macro";
+			#binding-cells = <0>;
+			bindings = <&kp LCTRL &kp LEFT>;
+		};
+		//switch desktop window right
+		deskR: deskR {
+			label = "deskR";
+			compatible = "zmk,behavior-macro";
+			#binding-cells = <0>;
+			bindings = <&kp LCTRL &kp RIGHT>;
+		};
+		//switch browser window left
+		sw_browserL: sw_browserL {
+			label = "sw_browserL";
+			compatible = "zmk,behavior-macro";
+			#binding-cells = <0>;
+			bindings = <&kp LALT &kp LGUI &kp LEFT>;
+		};
+		//switch browser window right
+		sw_browserR: sw_browserR {
+			label = "sw_browserR";
+			compatible = "zmk,behavior-macro";
+			#binding-cells = <0>;
+			bindings = <&kp LALT &kp LGUI &kp RIGHT>;
+		};
+		//zoom out desktop
+		zoom_out: zoom_out {
+			label = "zoom_out";
+			compatible = "zmk,behavior-macro";
+			#binding-cells = <0>;
+			bindings = <&kp LCTRL UP>;
+		};
 	};
 
 	combos {
@@ -81,6 +137,53 @@
 			bindings = <&kp LC(SPACE)>;
 			layers = <BASE>;
 		};
+		// option = right upper row index fingers 
+		combo_right_option {
+			timeout-ms = <200>;
+			key-positions = <07 08>;
+			bindings = <&kp LALT>;
+		};
+		// command = right upper row middle fingers 
+		combo_right_command {
+			timeout-ms = <200>;
+			key-positions = <08 09>;
+			bindings = <&kp RIGHT_COMMAND>;
+		};
+		// backspace = right middle row middle fingers 
+		combo_backspace {
+			timeout-ms = <200>;
+			key-positions = <18 19>;
+			bindings = <&kp BACKSPACE>;
+		};
+		// enter = right bottom row middle fingers 
+		combo_enter {
+			timeout-ms = <200>;
+			key-positions = <28 29>;
+			bindings = <&kp ENTER>;
+		};
+		// option = left upper row index fingers 
+		combo_left_option {
+			timeout-ms = <200>;
+			key-positions = <03 04>;
+			bindings = <&kp RALT>;
+		};
+		combo_left_command {
+			timeout-ms = <200>;
+			key-positions = <02 03>;
+			bindings = <&kp LEFT_COMMAND>;
+		};
+		// tab = left middle row middle fingers 
+		combo_tab {
+			timeout-ms = <200>;
+			key-positions = <12 13>;
+			bindings = <&kp TAB>;
+		};
+		// escape = left bottom row middle fingers 
+		combo_escape {
+			timeout-ms = <200>;
+			key-positions = <22 23>;
+			bindings = <&mo ESC>;
+		};
 	};
 
 	keymap {
@@ -90,8 +193,8 @@
 			label = "Base";
 			bindings = <
 			&kp Q &kp W &kp E &kp R &kp T           &kp Y &kp U  &kp I     &kp O   &kp P 
-			&kp A &kp S &kp D &kp F &kp G           &kp H &kp J  &kp K     &kp L &kp IT_OGRV
-			&kp Z &kp X &kp C &kp V &kp B           &kp N &kp M  &kp COMMA &kp DOT &kp IT_UGRV
+			&kp A &kp S &kp D &kp F &kp G           &kp H &kp J  &kp K     &kp L &kp IT_QUES
+			&kp Z &kp X &kp C &kp V &kp B           &kp N &kp M  &kp COMMA &kp DOT &kp IT_BKTK
 							&mo EXT &qt LSHIFT SPACE           &kp SPACE &sl SYM
 			>;
 		};
@@ -101,7 +204,7 @@
 			label = "Sym.";
 			bindings = <
 			&kp N1 &kp N2 &kp N3 &kp N4 &kp N5		                                    &kp N6 &kp N7 &kp N8 &kp N9 &kp N0
-			&kp IT_LESS &kp IT_USD &kp IT_LPAR &kp IT_LBRC &kp IT_LBKT  &kp IT_EQL &kp IT_QUES &kp IT_SQUOT &kp IT_MINUS &kp IT_AST
+			&kp IT_LESS &kp IT_USD &kp IT_LPAR &kp IT_LBRC &kp IT_LBKT  &kp IT_EQL &kp IT_UNDER &kp IT_SQUOT &kp IT_MINUS &kp IT_AST
 			&kp IT_GREAT &kp IT_PERC &kp IT_RPAR &kp IT_RBRC &kp IT_RBKT 	&kp IT_AT &kp IT_EXCL &kp IT_DQUOT &kp IT_PLUS &kp IT_FSLH
 														&mo FNC  &mo SYM2       &trans &trans
 			>;
@@ -111,10 +214,10 @@
 		ext_layer {
 			label = "Mods";
 			bindings = <
-			&kp ESC  &kp C_PREV &kp C_PP  &kp C_NEXT  &kp C_PAUSE    	&kp PG_UP  &kp HOME &kp UP &kp END &kp CAPS
-			&sk LALT &sk LGUI  &sk LSHIFT  &sk LCTRL  &kp RALT 			&kp PG_DN &kp LEFT  &kp DOWN  &kp RIGHT   &kp DEL
-			&kp LC(Z)  &kp LC(X) &kp LC(C) &kp TAB   &kp LC(V)          &kp LC(BSPC) &kp BSPC &trans &trans  &trans
-																		&trans &kp LCTRL    &kp ENTER  &mo FNC 
+			&print_screen  &kp K_VOL_UP &sw_browserL  &sw_browserR  &kp C_PAUSE    	&kp TILDE  &kp CARET &kp UP &kp END &kp CAPS
+			&kp C_BRI_UP &kp K_VOL_DN  &windowL &windowR  &zoom_out 			&kp AMPS &kp LEFT  &kp DOWN  &kp RIGHT   &trans
+			&kp C_BRI_DN &kp K_MUTE &deskL &deskR   &kp C_PLAY          &kp PIPE &kp HASH &kp BACKSLASH &trans  &trans
+												&trans &kp LCTRL    &kp SPACE  &mo FNC 
 			>;
 		};
 

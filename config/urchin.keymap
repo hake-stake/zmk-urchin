@@ -154,7 +154,7 @@
 		// Numbers and high frequency symbols
 		sym_layer {
 			label = "Sym.";
-			bindings = <GREATER_THAN
+			bindings = <
 			&kp N1 &kp N2 &kp N3 &kp N4 &kp N5		            &kp N6 &kp N7 &kp N8 &kp N9 &kp N0
 			&kp PRCNT &kp LESS_THAN &kp LPAR &kp LBRC &kp LBKT  &kp UNDER &kp EQUAL &kp PLUS &kp ASTRK &kp APOS
 			&kp DOLLAR &kp GREATER_THAN &kp RPAR &kp RBRC &kp RBKT 	&kp AT &kp EXCL &kp MINUS &kp FSLH &kp DQT

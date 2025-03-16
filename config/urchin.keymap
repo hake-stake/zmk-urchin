@@ -166,9 +166,9 @@
 		ext_layer {
 			label = "Mods";
 			bindings = <
-			&kp LG(LS(N4))  &kp K_VOL_UP &LG(LA(LEFT))  &LG(LA(RIGHT))  &kp C_PAUSE    	&kp TILDE  &kp CARET &kp UP &kp END &kp CAPS
-			&kp C_BRI_UP &kp K_VOL_DN  &LC(LA(LEFT)) &LC(LA(RIGHT))  &LC(UP) 			&kp AMPS &kp LEFT  &kp DOWN  &kp RIGHT   &trans
-			&kp C_BRI_DN &kp K_MUTE &LC(LEFT) &LC(RIGHT)   &kp C_PLAY          &kp PIPE &kp HASH &kp BACKSLASH &trans  &trans
+			&kp LG(LS(N4))  &kp K_VOL_UP &kp LG(LA(LEFT))  &kp LG(LA(RIGHT))  &kp C_PAUSE    	&kp TILDE  &kp CARET &kp UP &kp END &kp CAPS
+			&kp C_BRI_UP &kp K_VOL_DN  &kp LC(LA(LEFT)) &kp LC(LA(RIGHT))  &kp LC(UP) 			&kp AMPS &kp LEFT  &kp DOWN  &kp RIGHT   &trans
+			&kp C_BRI_DN &kp K_MUTE &kp LC(LEFT) &kp LC(RIGHT)   &kp C_PLAY          &kp PIPE &kp HASH &kp BACKSLASH &trans  &trans
 												&trans &kp LCTRL    &kp SPACE  &mo FNC 
 			>;
 		};

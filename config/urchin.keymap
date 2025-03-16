@@ -51,6 +51,62 @@
 			#binding-cells = <0>;
 			bindings = <&kp LSHIFT &kp RSHIFT &kp LCTRL &kp RCTRL &kp LALT &kp RALT &kp LGUI &kp RGUI>;
 		};
+		//print screen macro
+		print_screen: print_screen {
+			label = "print_screen";
+			compatible = "zmk,behavior-macro";
+			#binding-cells = <0>;
+			bindings = <&kp LSHIFT &kp LALT &kp LGUI &kp KP_N4>;
+		};
+		//resize window left
+		windowL: windowL {
+			label = "windowL";
+			compatible = "zmk,behavior-macro";
+			#binding-cells = <0>;
+			bindings = <&kp LALT &kp LCTRL &kp LEFT>;
+		};
+		//resize window right
+		windowR: windowR {
+			label = "windowR";
+			compatible = "zmk,behavior-macro";
+			#binding-cells = <0>;
+			bindings = <&kp LALT &kp LCTRL &kp RIGHT>;
+		};
+		//switch desktop window left
+		deskL: deskL {
+			label = "deskL";
+			compatible = "zmk,behavior-macro";
+			#binding-cells = <0>;
+			bindings = <&kp LCTRL &kp LEFT>;
+		};
+		//switch desktop window right
+		deskR: deskR {
+			label = "deskR";
+			compatible = "zmk,behavior-macro";
+			#binding-cells = <0>;
+			bindings = <&kp LCTRL &kp RIGHT>;
+		};
+		//switch browser window left
+		sw_browserL: sw_browserL {
+			label = "sw_browserL";
+			compatible = "zmk,behavior-macro";
+			#binding-cells = <0>;
+			bindings = <&kp LALT &kp LGUI &kp LEFT>;
+		};
+		//switch browser window right
+		sw_browserR: sw_browserR {
+			label = "sw_browserR";
+			compatible = "zmk,behavior-macro";
+			#binding-cells = <0>;
+			bindings = <&kp LALT &kp LGUI &kp RIGHT>;
+		};
+		//zoom out desktop
+		zoom_out: zoom_out {
+			label = "zoom_out";
+			compatible = "zmk,behavior-macro";
+			#binding-cells = <0>;
+			bindings = <&kp LCTRL UP>;
+		};
 	};
 
 	combos {

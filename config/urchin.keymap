@@ -84,7 +84,7 @@
 		// option = right upper row index fingers 
 		combo_right_option {
 			timeout-ms = <200>;
-			key-positions = <07 08>;
+			key-positions = <7 8>;
 			bindings = <&kp LALT>;
 			layers = <BASE>;
 		};

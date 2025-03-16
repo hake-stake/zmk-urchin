@@ -81,6 +81,13 @@
 			bindings = <&kp LC(SPACE)>;
 			layers = <BASE>;
 		};
+		// option = right upper row index fingers 
+		combo_right_option {
+			timeout-ms = <200>;
+			key-positions = <07 08>;
+			bindings = <&kp LALT>;
+			layers = <BASE>;
+		};
 	};
 
 	keymap {

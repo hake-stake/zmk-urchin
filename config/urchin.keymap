@@ -86,14 +86,12 @@
 			timeout-ms = <100>;
 			key-positions = <6 7>;
 			bindings = <&kp RALT>;
-			layers = <BASE>;
 		};
 		// command = right upper row middle fingers 
 		combo_right_command {
 			timeout-ms = <100>;
 			key-positions = <7 8>;
 			bindings = <&kp RIGHT_COMMAND>;
-			layers = <BASE>;
 		};
 		// backspace = right middle row middle fingers 
 		combo_backspace {
@@ -114,13 +112,11 @@
 			timeout-ms = <100>;
 			key-positions = <2 3>;
 			bindings = <&kp RALT>;
-			layers = <BASE>;
 		};
 		combo_left_command {
 			timeout-ms = <100>;
 			key-positions = <1 2>;
 			bindings = <&kp LEFT_COMMAND>;
-			layers = <BASE>;
 		};
 		// tab = left middle row middle fingers 
 		combo_tab {
@@ -155,10 +151,10 @@
 		sym_layer {
 			label = "Sym.";
 			bindings = <
-			&kp N1 &kp N2 &kp N3 &kp N4 &kp N5		            &kp N6 &kp N7 &kp N8 &kp N9 &kp N0
-			&kp PRCNT &kp LESS_THAN &kp LPAR &kp LBRC &kp LBKT  &kp UNDER &kp EQUAL &kp PLUS &kp ASTRK &kp APOS
-			&kp DOLLAR &kp GREATER_THAN &kp RPAR &kp RBRC &kp RBKT 	&kp AT &kp EXCL &kp MINUS &kp FSLH &kp DQT
-														&mo FNC  &mo SYM2       &trans &trans
+			&kp N1 &kp N2 &kp N3 &kp N4 &kp N5		                &kp N6 &kp N7 &kp N8 &kp N9 &kp N0
+			&kp PRCNT &kp LESS_THAN &kp LPAR &kp LBRC &kp LBKT      &kp UNDER &kp EQUAL &kp PLUS &kp ASTRK &kp COLON
+			&kp AMPS &kp GREATER_THAN &kp RPAR &kp RBRC &kp RBKT 	&kp AT &kp EXCL &kp MINUS &kp FSLH &kp SEMI
+											&mo FNC  &mo SYM2       &trans &trans
 			>;
 		};
 
@@ -166,9 +162,9 @@
 		ext_layer {
 			label = "Mods";
 			bindings = <
-			&kp LG(LS(N4))  &kp K_VOL_UP &kp LG(LA(LEFT))  &kp LG(LA(RIGHT))  &kp C_PAUSE    	&kp TILDE  &kp CARET &kp UP &kp END &kp LC(C)
-			&kp C_BRI_UP &kp K_VOL_DN  &kp LC(LA(LEFT)) &kp LC(LA(RIGHT))  &kp LC(UP) 			&kp AMPS &kp LEFT  &kp DOWN  &kp RIGHT   &trans
-			&kp C_BRI_DN &kp K_MUTE &kp LC(LEFT) &kp LC(RIGHT)   &kp C_PLAY          &kp PIPE &kp HASH &kp BACKSLASH &trans  &trans
+			&trans  &kp K_VOL_UP &kp LG(LA(LEFT))  &kp LG(LA(RIGHT))  &kp C_PAUSE    	&kp TILDE  &kp CARET &kp UP &kp END &kp LC(C)
+			&kp C_BRI_UP &kp K_VOL_DN  &kp LC(LA(LEFT)) &kp LC(LA(RIGHT))  &kp LC(UP) 			&kp PIPE &kp LEFT  &kp DOWN  &kp RIGHT   &kp LG(LS(N4))
+			&kp C_BRI_DN &kp K_MUTE &kp LC(LEFT) &kp LC(RIGHT)   &kp C_PLAY          &kp DOLLAR &kp HASH &kp BACKSLASH &kp APOS  &kp DQT
 												&trans &kp LCTRL    &kp SPACE  &mo FNC 
 			>;
 		};
